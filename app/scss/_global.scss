@@ -1,0 +1,45 @@
+body {
+    color: $default;
+    font-size: 16px;
+    line-height: 1.9;
+    @extend %dmsans-700;
+    background-color: $bg;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    max-width: 145px;
+    max-height: 40px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: $title;
+}
+
+.gallery-filter__btn {
+    color: $gallery-button;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+   transition: all 0.5s;
+    &:hover {
+        color: $default;
+        border-bottom: 1px solid $default;
+    }
+    
+}

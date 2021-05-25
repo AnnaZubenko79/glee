@@ -1,0 +1,46 @@
+
+$bg: #fff;
+$default: #243f4d;
+$blue: #a3bbc8;
+$bg-blue: #edf1f4;
+$bg-color: #fcd7b6;
+$item: #436372;
+$light-bgcolor: #fef7f0;
+$gallery-button: #8b8b8b;
+$title: #1a1a1a;
+$footer: #7b7b7b;
+
+%rubik-500 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%rubik-400 {
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+
+%dmsans-700 {
+    font-family: 'DMSans-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%dmsans-500 {
+    font-family: 'DMSans-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%dmsans-400 {
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 400;
+}
+
+
+@function max($numbers...){
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+    @return m#{i}n(#{$numbers});
+}
+
