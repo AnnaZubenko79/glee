@@ -1,14 +1,21 @@
-
-$bg: #fff;
 $default: #243f4d;
+
+$white: #ffffff;
+$white-100: #f8f8f8;
+
 $blue: #a3bbc8;
-$bg-blue: #edf1f4;
-$bg-color: #fcd7b6;
-$item: #436372;
-$light-bgcolor: #fef7f0;
-$gallery-button: #8b8b8b;
-$title: #1a1a1a;
-$footer: #7b7b7b;
+$blue-100: #edf1f4;
+$blue-200: #436372;
+
+$grey: #8b8b8b;
+$grey-100: #e0e0e0;
+$grey-200: #7b7b7b;
+$grey-300: #1a1a1a;
+
+$peach: #fcd7b6;
+$peach-100:#fef7f0;
+$peach-200: #feefe2;
+
 
 %rubik-500 {
     font-family: 'Rubik-Medium', sans-serif;

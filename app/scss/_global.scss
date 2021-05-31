@@ -1,9 +1,21 @@
 body {
     color: $default;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.3;
     @extend %dmsans-700;
-    background-color: $bg;
+    background-color: $white;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .container {
@@ -12,10 +24,8 @@ body {
     padding: 0 15px;
 }
 
-.container-fluid {
+.container--fluid {
     max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 .logo {
@@ -27,19 +37,61 @@ body {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
-    color: $title;
+    color: $grey-300;
 }
 
 .gallery-filter__btn {
-    color: $gallery-button;
+    color: $grey;
     border: none;
     background-color: transparent;
     padding: 0;
     border-bottom: 1px solid transparent;
-   transition: all 0.5s;
+    transition: all 0.5s;
+
+    &:focus {
+        background-color: $peach;
+    }
+
     &:hover {
         color: $default;
         border-bottom: 1px solid $default;
     }
+
+    &:active {
+        background-color: $blue;
+    }
+
+}
+
+.gallery-filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    justify-content: center;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+.mixitup-control-active {
+    color: $grey-300;
+}
+}
+
+.btn {
+    display: inline-block;
+    font-size: 15px;   
+      
+    box-sizing: border-box;
+    @extend %rubik-500;
+}
     
+.arrow {
+    margin-left: 40px;
+    svg {
+        width: 22px;
+        height: 9px;
+        fill: $white;
+    }
 }
