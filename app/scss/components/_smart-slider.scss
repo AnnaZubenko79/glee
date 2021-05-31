@@ -1,0 +1,203 @@
+.smart {
+    &__inner {
+        position: relative;
+        min-height: 820px;
+        background-color: $peach;
+    }
+
+    &__container {
+        max-width: 1300px;
+        width: 100%;
+
+        .swiper-pagination-bullet {
+            background-color: #fde3cc;
+            border-radius: 50%;
+            width: 30px;
+            height: 29px;
+            text-align: center;
+            font-size: 15px;
+            color: #667983;
+            opacity: 0.8;
+            transition: all .5s;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: #fde3cc;
+                background-color: #667983;
+                cursor: pointer;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $white;
+            color: $default;
+        }
+    }
+}
+
+.smart-slide {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__text {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 748px;
+        justify-content: center;
+        margin-left: 32px;
+    }
+
+    &__title {
+        max-width: 418px;
+        font-size: 72px;
+        @extend %rubik-500;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        max-width: 400px;
+        font-size: 18px;
+        @extend %rubik-400;
+        color: $blue-200;
+        line-height: 1.7;
+        margin-bottom: 40px;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+    }
+
+    &__btn {
+        position: relative;
+        color: $white;
+        transition: all .5s;
+        max-width: 200px;
+        width: 100%;
+        height: 60px;
+        padding: 16px 0 0 28px;
+        background-color: $blue;  
+
+        &:hover {
+            color: $blue;
+            background-color: $white;
+
+            .smart-slide__arrow {
+                svg {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+
+    
+
+    &__images {
+        max-width: 800px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 634px;
+            height: 634px;
+            background-image: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
+            z-index: -1;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+    }
+
+    &__img {
+        position: relative;
+        max-width: 640px;
+        width: 100%;
+        max-height: 264px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 45px;
+    }
+}
+
+.smart-descr {    
+    background-color: $peach-100;
+    display: flex;
+    justify-content: space-around;
+    padding: 38px 0;
+
+    &__item {
+        position: relative;
+        padding-left: 70px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        &--support {
+            &::before {
+                width: 51px;
+                height: 54px;
+                background-image: url('../images/slider/smart-descr/support.svg');
+            }
+        }
+
+        &--delivery {
+            padding-top: 8px;
+
+            &::before {
+                background-image: url('../images/slider/smart-descr/delivery.svg');
+                width: 54px;
+                height: 37px;
+                top: 20px;
+                left: -15px;
+            }
+        }
+
+        &--payment {
+            &::before {
+                background-image: url('../images/slider/smart-descr/payment.svg');
+                width: 54px;
+                height: 53px;
+            }
+        }
+    }
+
+
+
+
+
+    &__title {
+        display: block;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    &__text {
+        display: block;
+        max-width: 213px;
+        font-size: 16px;
+        line-height: 1.9;
+        @extend %dmsans-400;
+    }
+}
