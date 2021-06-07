@@ -14,82 +14,106 @@
         max-width: 1170px;
         width: 100%;
 
+        @media (max-width: $screen-lg) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__item {
-        display: flex;
-        max-width: 370px;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        box-shadow: 0px 6px 47px 3px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
         border-radius: 5px 5px 0px 0px;
         padding-bottom: 25px;
         background-color: $white;
         position: relative;
         z-index: 1;
+
+        @media (max-width: $screen-lg) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.news-article {
+    display: flex;
+    max-width: 370px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: $screen-xl) {
+        max-width: 310px;
     }
 
-    &__link {}
+    &__link {
+        margin-bottom: 30px;
+    }
 
     &__images {
         position: relative;
         max-width: 370px;
         width: 100%;
-        max-height: 250px;
-        background-color: #e1e1e1;
+        min-height: 250px;
+        background-color: $peach-700;
         border-radius: 5px 5px 0px 0px;
-        margin-bottom: 30px;
-       
+
+        @media (max-width: $screen-xl) {
+            max-width: 310px;
+        }
     }
 
     &__text {
         position: relative;
         display: block;
-        @extend %dmsans-500;
+        @include DMSans(500);
         font-size: 18px;
         line-height: 1.2;
         margin-bottom: 35px;
         max-width: 308px;
-        &:before {
-            content: 'NEWS';
-            position: absolute;
-            max-width: 103px;
-            width: 100%;
-            // height: 30px;
-            border-radius: 15px;
-            background-color: $blue;
-            top: -47px;
-            left: 0;
-            color: $white;
-            font-size: 14px;
-            text-align: center;
-            padding: 10px 0;
+        color: $grey-400;
+        @include LClamp(3);
+
+        &--labore {
+            margin-bottom: 57px;
         }
-        
+    }
+
+    &__state {
+        display: block;
+        border-radius: 15px;
+        background-color: $blue;
+        color: $white;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 0;
+        max-width: 103px;
+        width: 100%;
+        transform: translate(30%, -110%);
+        text-transform: uppercase;
+        align-self: flex-start;
     }
 
     &__bottom {
         position: relative;
-        display: flex;        
+        display: flex;
         max-width: 315px;
         width: 100%;
         font-size: 12px;
         font-weight: 400;
-        color: #222933;
-        @extend %rubik-400;
-        text-transform: uppercase; 
-        margin-top: auto; 
-           &:before {
+        color: $blue-300;
+        @include Rubik(400);
+        text-transform: uppercase;
+
+        &::before {
             content: '';
             position: absolute;
             max-width: 315px;
             width: 100%;
             border-top: 1px solid $grey-100;
             top: -22px;
-
-        }         
+        }
     }
+
     &__date {
         margin-right: 25px;
     }
@@ -97,7 +121,7 @@
 
 .partners-slider {
     display: flex;
-    align-items: flex-end;     
+    align-items: flex-end;
     position: absolute;
     background-color: $peach-200;
     min-height: 430px;
@@ -106,44 +130,33 @@
     bottom: 0;
     padding-bottom: 80px;
 
-    &__container {
-        max-width: 1047px;
+    &__inner {
+        max-width: 1050px;
         width: 100%;
+        margin: 0 auto;
     }
+
     &__wrapper {
-        max-width: 1047px;
+        display: flex;
+        align-items: center;
+        max-width: 1050px;
         width: 100%;
     }
+
     &__slide {
-        max-width: 1047px;
-        width: 100%;        
-        display: flex;       
-        justify-content: space-between;
-        align-items: center;
-    }       
-    
+        max-width: 160px;
+        width: 100%;
+        min-height: 48px;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
     &__images {
         opacity: 0.5;
-        &--peterson {
-            width: 82px;
-            height: 84px;
-        }
-        &--kmn {
-            width: 151px;
-            height: 48px;
-        }
-        &--chainforce {
-            width: 150px;
-            height: 77px;
-        }
-        &--next {
-            width: 167px;
-            height: 52px;
-        }
-        &--vintage {
-            width: 87px;
-            height: 66px;
-        }   
+        max-width: 160px;
+        min-height: 48px;
+        object-fit: cover;
     }
 }
-        

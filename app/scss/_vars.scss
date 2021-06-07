@@ -1,53 +1,58 @@
 $default: #243f4d;
-
 $white: #ffffff;
 $white-100: #f8f8f8;
-
+$white-200: #fffcfa;
 $blue: #a3bbc8;
 $blue-100: #edf1f4;
+$blue-150: #234969;
 $blue-200: #436372;
-
+$blue-250: #dae4e9;
+$blue-300: #222933;
+$blue-350: #1f2044;
+$blue-600: #0000ff;
 $grey: #8b8b8b;
+$grey-50: #e8e4df;
 $grey-100: #e0e0e0;
 $grey-200: #7b7b7b;
 $grey-300: #1a1a1a;
-
+$grey-400: #262626;
+$grey-500: #667983;
 $peach: #fcd7b6;
 $peach-100:#fef7f0;
 $peach-200: #feefe2;
+$peach-300: #cbc6c6;
+$peach-400: #cbc6c6;
+$peach-500: #fde3cc;
+$peach-600: #fdfdfd;
+$peach-700: #e1e1e1;
 
-
-%rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
+@mixin Rubik($Rfw) {
+    font-family: 'Rubik', sans-serif;
+    font-weight: $Rfw;
 }
 
-%rubik-400 {
-    font-family: 'Rubik-Regular', sans-serif;
-    font-weight: 400;
+@mixin DMSans($Dfw) {
+    font-family: 'DMSans', sans-serif;
+    font-weight: $Dfw;
 }
 
-
-%dmsans-700 {
-    font-family: 'DMSans-Bold', sans-serif;
-    font-weight: 700;
-}
-
-%dmsans-500 {
-    font-family: 'DMSans-Medium', sans-serif;
-    font-weight: 500;
-}
-
-%dmsans-400 {
-    font-family: 'DMSans-Regular', sans-serif;
-    font-weight: 400;
-}
-
-
-@function max($numbers...){
+@function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }
-@function min($numbers...){
+
+@function min($numbers...) {
     @return m#{i}n(#{$numbers});
 }
 
+@mixin LClamp($lk) {
+    -webkit-line-clamp: $lk;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+$screen-xs: 480px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
