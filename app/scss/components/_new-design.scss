@@ -1,27 +1,61 @@
 .new-design {
-    padding: 97px 0 125px;
+    padding: 120px 0 125px;
     background-color: $white;
+
+    @media (max-width: $screen-xl) {
+        padding: 40px 0 40px;
+    }
+
     &__content {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-between;
+
+        @media (max-width: $screen-xl) {
+            justify-content: center;
+        }
+    }
+}
+
+.card-new {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    min-height: 246px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-100;
+    padding: 40px 36px;
+
+    @media (max-width: $screen-xl) {
+        padding: 5px 5px;
     }
 
-    &__item {
-        position: relative;
-        max-width: 370px;
-        width: 100%;
-        min-height: 246px;
-        display: flex;
-        flex-direction: column;
-        background-color: $white-100;
-        padding: 40px 36px;
-        &:not(:nth-child(3n+3)) {
+    @media (max-width: $screen-lg) {
+        max-width: 350px;
+    }
+
+    @media (max-width: $screen-md) {
+        max-width: 280px;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 5px 3px $blue;
+    }
+
+    &:not(:nth-child(3n+3)) {
         margin-right: 30px;
     }
+
     &:not(:nth-child(n+4)) {
         margin-bottom: 30px;
     }
+
+    @media (max-width: $screen-xl) {
+        margin: 0 15px 15px 0;
+    }
+
+    @media (max-width: $screen-md) {
+        margin: 0 5 5px 0;
     }
 
     &__img {
@@ -30,21 +64,28 @@
         right: 0;
         object-fit: cover;
         max-width: 280px;
-        max-height: 200px; 
+        max-height: 200px;
+
         &--chair {
             right: 35px
-        }         
+        }
     }
 
     &__title {
+        position: relative;
+        z-index: 1;
         font-size: 20px;
         line-height: 1.2;
         max-width: 169px;
         color: $grey-300;
-        margin-bottom: 10px;        
+        margin-bottom: 10px;
+        @include LClamp(2);
     }
 
     &__descr {
+        position: relative;
+        z-index: 1;
         color: $blue;
+        @include LClamp(1);
     }
 }

@@ -13,126 +13,131 @@
 <body>
     <header class="header">
         <div class="container container--fluid">
-            <nav class="header__inner">
-                <a class="logo" href="#">
+            <div class="header__wrapper">
+                <button class="menu__btn">
+                    <span class="menu__line"></span>
+                    <span class="menu__line"></span>
+                    <span class="menu__line"></span>
+                </button>
+                <a class="logo logo--header" href="#">
                     <img class="logo__image" src="images/logo.png" alt="logo">
                 </a>
-                <ul class="menu">
-                    <li class="menu__item menu__item--dropdown">
-                        <a class="menu__link menu__link--dropdown" href="#">
-                            Home
-                        </a>
-                        <div class="dropdown dropdown--home">
-                            <button class="dropdown__btn dropdown__btn--home" type="submit">
-                                <span class="dropdown__line"></span>
-                                <span class="dropdown__line"></span>
-                            </button>
-                            <ul class="dropdown__list">
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 1</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 2</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 3</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">
-                            About
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">
-                            Services
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item--dropdown">
-                        <a class="menu__link menu__link--dropdown" href="#">
-                            Pages
-                        </a>
-                        <div class="dropdown dropdown--pages">
-                            <button class="dropdown__btn dropdown__btn--pages" type="submit">
-                                <span class="dropdown__line"></span>
-                                <span class="dropdown__line"></span>
-                            </button>
-                            <ul class="dropdown__list">
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 1</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 2</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 3</a>
-                                </li>
-                                <li class="dropdown__items">
-                                    <a href="#" class="dropdown__element">Task 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">
-                            News
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <div class="nav-users">
-                    <button class="nav-users__btn nav-users__btn--search" type="submit">
-                        <span class="sr-only">Search</span>
-                        <svg>
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </button>
-                    <ul class="nav-users__list">
-                        <li class="nav-users__item nav-users__item--heart">
-                            <a class="nav-users__link nav-users__link--heart" href="#">
-                                <span class="sr-only">Your like</span>
-                                <svg>
-                                    <use xlink:href="images/sprite.svg#heart"></use>
-                                </svg>
+                <nav class="header__inner">
+                    <ul class="menu">
+                        <li class="menu__item menu__item--dropdown">
+                            <a class="menu__link menu__link--dropdown" href="#">
+                                Home
                             </a>
-                            <span class="nav-users__num">0</span>
+                            <div class="dropdown dropdown--home">
+                                <button class="dropdown__btn dropdown__btn--home" type="submit">
+                                    <span class="dropdown__line">+</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 1</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 2</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 3</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 4</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="nav-users__item nav-users__item--basket">
-                            <span class="sr-only">Basket</span>
-                            <a class="nav-users__link nav-users__link--basket" href="#">
-                                <svg>
-                                    <use xlink:href="images/sprite.svg#basket"></use>
-                                </svg>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                About
                             </a>
-                            <span class="nav-users__num nav-users__num--basket">0</span>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Services
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--dropdown">
+                            <a class="menu__link menu__link--dropdown" href="#">
+                                Pages
+                            </a>
+                            <div class="dropdown dropdown--pages">
+                                <button class="dropdown__btn dropdown__btn--pages" type="submit">
+                                    <span class="dropdown__line">+</span>
+                                </button>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 1</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 2</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 3</a>
+                                    </li>
+                                    <li class="dropdown__items">
+                                        <a href="#" class="dropdown__element">Task 4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                News
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Contact
+                            </a>
                         </li>
                     </ul>
-                    <button class="header__btn" type="submit">
-                        <span class="sr-only">Menu</span>
-                        <svg>
-                            <use xlink:href="images/sprite.svg#header-btn"></use>
-                        </svg>
-                    </button>
-                </div>
-            </nav>
+                    <div class="nav-users">
+                        <button class="nav-users__btn nav-users__btn--search" type="submit">
+                            <span class="sr-only">Search</span>
+                            <svg>
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <ul class="nav-users__list">
+                            <li class="nav-users__item nav-users__item--heart">
+                                <a class="nav-users__link nav-users__link--heart" href="#">
+                                    <span class="sr-only">Your like</span>
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <span class="nav-users__num">0</span>
+                            </li>
+                            <li class="nav-users__item nav-users__item--basket">
+                                <span class="sr-only">Basket</span>
+                                <a class="nav-users__link nav-users__link--basket" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#basket"></use>
+                                    </svg>
+                                </a>
+                                <span class="nav-users__num nav-users__num--basket">0</span>
+                            </li>
+                        </ul>
+                        <button class="header__btn" type="submit">
+                            <span class="sr-only">Menu</span>
+                            <svg>
+                                <use xlink:href="images/sprite.svg#header-btn"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="smart">
             <div class="container container--fluid">
                 <h1 class="sr-only">Slider smart and trendy</h1>
                 <div class="smart__inner">
-                    <div class="swiper-container smart__container">
+                    <div class="swiper-container smart__content">
                         <div class="swiper-wrapper smart__wrapper">
                             <div class="swiper-slide smart-slide">
                                 <div class="smart-slide__text">
@@ -162,7 +167,7 @@
                                             sed do eiusmod tempor incididunt</p>
                                     </div>
                                     <a class="smart-slide__btn btn" href="#">Shop Now
-                                        <span class="smart-slide__arrow">
+                                        <span class="smart-slide__arrow arrow">
                                             <svg>
                                                 <use xlink:href="images/sprite.svg#arrow-btn"></use>
                                             </svg>
@@ -182,7 +187,7 @@
                                             sed do eiusmod tempor incididunt</p>
                                     </div>
                                     <a class="smart-slide__btn btn" href="#">Shop Now
-                                        <span class="smart-slide__arrow">
+                                        <span class="smart-slide__arrow arrow">
                                             <svg>
                                                 <use xlink:href="images/sprite.svg#arrow-btn"></use>
                                             </svg>
@@ -194,7 +199,6 @@
                                         alt="slider sofa">
                                 </div>
                             </div>
-
                         </div>
                         <div class="swiper-pagination smart-slide__pagination">
                         </div>
@@ -241,227 +245,221 @@
                         <button class="gallery-filter__btn" type="button" data-filter=".category-deco">Deco</button>
                     </li>
                 </ul>
-
                 <div class="gallery-content">
-                    <article class="gallery-content__item mix category-furnitures">
-                        <a class="gallery-content__link" href="images/week-products/1.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/1.png" alt="radio">
+                    <article class="card mix category-furnitures">
+                        <a class="card__link" href="images/week-products/1.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/1.png" alt="radio">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Wooden radio</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
+                        <a class="card__title" href="#">Wooden radio</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-furnitures">
-                        <a class="gallery-content__link" href="images/week-products/2.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/2.png" alt="radio">
+                    <article class="card mix category-furnitures">
+                        <a class="card__link" href="images/week-products/2.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/2.png" alt="radio">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Wooden chair</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">Wooden chair</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-chairs">
-                        <a class="gallery-content__link" href="images/week-products/3.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/3.png" alt="radio">
+                    <article class="card mix category-chairs">
+                        <a class="card__link" href="images/week-products/3.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/3.png" alt="radio">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">White chair</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">White chair</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-chairs">
-                        <a class="gallery-content__link" href="images/week-products/4.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/4.png" alt="Retro table">
+                    <article class="card mix category-chairs">
+                        <a class="card__link" href="images/week-products/4.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/4.png" alt="Retro table">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Retro table</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">Retro table</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-deco">
-                        <a class="gallery-content__link" href="images/week-products/5.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/5.png" alt="Wooden radio">
+                    <article class="card mix category-deco">
+                        <a class="card__link" href="images/week-products/5.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/5.png" alt="Wooden radio">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Wooden radio</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">Wooden radio</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-deco">
-                        <a class="gallery-content__link" href="images/week-products/6.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/6.png" alt="Wooden chair">
+                    <article class="card mix category-deco">
+                        <a class="card__link" href="images/week-products/6.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/6.png" alt="Wooden chair">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Wooden chair</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">Wooden chair</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-lighting">
-                        <a class="gallery-content__link" href="images/week-products/7.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/7.png" alt="White chair">
+                    <article class="card mix category-lighting">
+                        <a class="card__link" href="images/week-products/7.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/7.png" alt="White chair">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">White chair</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">White chair</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
-                    <article class="gallery-content__item mix category-lighting">
-                        <a class="gallery-content__link" href="images/week-products/8.png" data-fancybox
-                            data-width="500" data-height="500">
-                            <img class="gallery-content__img" src="images/week-products/8.png" alt="Retro table">
+                    <article class="card mix category-lighting">
+                        <a class="card__link" href="images/week-products/8.png" data-fancybox data-width="500"
+                            data-height="500">
+                            <img class="card__img" src="images/week-products/8.png" alt="Retro table">
                         </a>
-                        <div class="gallery-content__element">
-                            <a class="gallery-content__more" href="#">
+                        <div class="card__element">
+                            <a class="card__more" href="#">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#search"></use>
                                 </svg>
                             </a>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#heart"></use>
                                 </svg>
                             </button>
-                            <button class="gallery-content__more" type="submit">
+                            <button class="card__more" type="submit">
                                 <svg>
                                     <use xlink:href="images/sprite.svg#basket"></use>
                                 </svg>
                             </button>
                         </div>
-                        <a class="gallery-content__title" href="#">Retro table</a>
-                        <span class="gallery-content__price"><span class="gallery-content__curency">$</span>29.00</span>
-
+                        <a class="card__title" href="#">Retro table</a>
+                        <span class="card__price"><span class="card__curency">$</span>29.00</span>
                     </article>
                 </div>
             </div>
             <div class="container container--fluid">
-                <div class="lamps">
-                    <div class="lamps__content">
-                        <img class="lamps__images" src="images/week-products/lamps-left.png" alt="Mirum Notare">
-                        <div class="lamps__info lamps__info--left">
-                            <span class="lamps__title">Mirum Notare Tellus</span>
-                            <div class="lamps__text">
+                <ul class="sale">
+                    <li class="sale__content">
+                        <a class="sale__link" href="#">
+                            <img class="sale__images" src="images/week-products/lamps-left.png" alt="Mirum Notare">
+                        </a>
+                        <div class="sale__info">
+                            <a class="sale__title" href="#">Mirum Notare Tellus</a>
+                            <div class="sale__text">
                                 <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
                             </div>
-                            <a class="lamps__btn btn" href="#">View More
+                            <a class="sale__btn btn" href="#">View More
                                 <span class="smart-slide__arrow arrow">
                                     <svg>
                                         <use xlink:href="images/sprite.svg#arrow-btn"></use>
@@ -469,17 +467,19 @@
                                 </span>
                             </a>
                         </div>
-                    </div>
-                    <div class="lamps__content">
-                        <img class="lamps__images" src="images/week-products/lamps-right.png" alt="Malesuada Tempor">
-                        <div class="lamps__info lamps__info--right">
-                            <span class="lamps__title">Malesuada Tempor Euismod</span>
-                            <div class="lamps__text">
+                    </li>
+                    <li class="sale__content">
+                        <a class="sale__link" href="#">
+                            <img class="sale__images" src="images/week-products/lamps-right.png" alt="Malesuada Tempor">
+                        </a>
+                        <div class="sale__info sale__info--right">
+                            <a class="sale__title" href="#">Malesuada Tempor Euismod</a>
+                            <div class="sale__text">
                                 <p>
                                     50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                                 </p>
                             </div>
-                            <a class="lamps__btn btn" href="#">View More
+                            <a class="sale__btn btn" href="#">View More
                                 <span class="smart-slide__arrow arrow">
                                     <svg>
                                         <use xlink:href="images/sprite.svg#arrow-btn"></use>
@@ -487,8 +487,8 @@
                                 </span>
                             </a>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -518,169 +518,179 @@
                 </ul>
 
                 <div class="new-design__content">
-                    <article class="new-design__item mix category-furnitures">
-                        <a class="new-design__link" href="images/new-design/1.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-furnitures">
+                        <a class="card-new__link" href="images/new-design/1.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img" src="images/new-design/1.png" alt="Beat Flat Pendant Black">
+                            <img class="card-new__img" src="images/new-design/1.png" alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Beat Flat Pendant Black</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Beat Flat Pendant Black</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
-                    <article class="new-design__item mix category-furnitures">
-                        <a class="new-design__link" href="images/new-design/2.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-furnitures">
+                        <a class="card-new__link" href="images/new-design/2.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img" src="images/new-design/2.png" alt="Beat Flat Pendant Black">
+                            <img class="card-new__img" src="images/new-design/2.png" alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Lampe Sur Pieds Bamboo</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Lampe Sur Pieds Bamboo</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
-                    <article class="new-design__item mix category-lighting">
-                        <a class="new-design__link" href="images/new-design/3.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-lighting">
+                        <a class="card-new__link" href="images/new-design/3.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img new-design__img--chair" src="images/new-design/3.png"
+                            <img class="card-new__img card-new__img--chair" src="images/new-design/3.png"
                                 alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Rattan Rocking Chair</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Rattan Rocking Chair</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
-                    <article class="new-design__item mix category-deco">
-                        <a class="new-design__link" href="images/new-design/4.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-deco">
+                        <a class="card-new__link" href="images/new-design/4.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img" src="images/new-design/4.png" alt="Beat Flat Pendant Black">
+                            <img class="card-new__img" src="images/new-design/4.png" alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Rattan Rocking Chair</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Rattan Rocking Chair</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
-                    <article class="new-design__item mix category-chairs">
-                        <a class="new-design__link" href="images/new-design/5.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-chairs">
+                        <a class="card-new__link" href="images/new-design/5.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img new-design__img--chair" src="images/new-design/5.png"
+                            <img class="card-new__img card-new__img--chair" src="images/new-design/5.png"
                                 alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Rattan Rocking Chair</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Rattan Rocking Chair</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
-                    <article class="new-design__item mix category-chairs">
-                        <a class="new-design__link" href="images/new-design/6.png" data-fancybox data-width="500"
+                    <article class="card-new mix category-chairs">
+                        <a class="card-new__link" href="images/new-design/6.png" data-fancybox data-width="500"
                             data-height="500">
-                            <img class="new-design__img" src="images/new-design/6.png" alt="Beat Flat Pendant Black">
+                            <img class="card-new__img" src="images/new-design/6.png" alt="Beat Flat Pendant Black">
                         </a>
-                        <a class="new-design__title" href="#">Lampe Sur Pieds Bamboo</a>
-                        <span class="new-design__descr">Classic</span>
+                        <a class="card-new__title" href="#">Lampe Sur Pieds Bamboo</a>
+                        <span class="card-new__descr">Classic</span>
                     </article>
                 </div>
             </div>
         </section>
-        <section class="video-popup">
-            <h2 class="sr-only">Watch video about us</h2>
-            <a class="video-popup__link" data-fancybox href="https://youtu.be/p_S0EAK9Fp4"></a>
-        </section>
+
+
+        <a class="video-popup" data-fancybox href="https://youtu.be/p_S0EAK9Fp4">
+            <span class="sr-only">Watch video about us</span>
+        </a>
+
+
+
         <section class="news">
             <div class="container">
                 <h2 class="news__title title">Our Insights & Articles</h2>
                 <ul class="news__list">
                     <li class="news__item">
-                        <a class="news__link" href="#">
-                            <img class="news__images" src="images/news/1.jpg" alt="">
-                        </a>
-                        <a class="news__text" href="#">
-                            Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                        </a>
-                        <div class="news__bottom">
-                            <span class="news__date"> 28 JANUARY, 2020</span>
-                            <span class="news__author"> by admin</span>
-                        </div>
+                        <article class="news-article">
+                            <a class="news-article__link" href="#">
+                                <img class="news-article__images" src="images/news/1.jpg"
+                                    alt="Diusmod tempor incididunt">
+                            </a>
+                            <span class="news-article__state">news</span>
+                            <a class="news-article__text" href="#">
+                                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </a>
+                            <div class="news-article__bottom">
+                                <span class="news-article__date"> 28 JANUARY, 2020</span>
+                                <span class="news-article__author"> by admin</span>
+                            </div>
+                        </article>
                     </li>
                     <li class="news__item">
-                        <a class="news__link" href="#">
-                            <img class="news__images" src="images/news/2.jpg" alt="">
-                        </a>
-                        <a class="news__text" href="#">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore </a>
-                        <div class="news__bottom">
-                            <span class="news__date"> 28 JANUARY, 2020</span>
-                            <span class="news__author"> by admin</span>
-                        </div>
+                        <article class="news-article">
+                            <a class="news-article__link" href="#">
+                                <img class="news-article__images" src="images/news/2.jpg" alt="Aonsectetur adipisicing">
+                            </a>
+                            <span class="news-article__state">news</span>
+                            <a class="news-article__text" href="#">Aonsectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore </a>
+
+                            <div class="news-article__bottom">
+                                <span class="news-article__date"> 28 JANUARY, 2020</span>
+                                <span class="news-article__author"> by admin</span>
+                            </div>
+                        </article>
                     </li>
                     <li class="news__item">
-                        <a class="news__link" href="#">
-                            <img class="news__images" src="images/news/3.jpg" alt="">
-                        </a>
-                        <a class="news__text" href="#">Rncididunt ut labore et dolore magna aliqua. Ut enim</a>
-                        <div class="news__bottom">
-                            <span class="news__date"> 28 JANUARY, 2020</span>
-                            <span class="news__author"> by admin</span>
-                        </div>
+                        <article class="news-article">
+                            <a class="news-article__link" href="#">
+                                <img class="news-article__images" src="images/news/3.jpg" alt="Rncididunt ut labore">
+                            </a>
+                            <span class="news-article__state">news</span>
+                            <a class="news-article__text news-article__text--labore" href="#">Rncididunt ut labore et
+                                dolore magna aliqua. Ut enim</a>
+                            <div class="news-article__bottom news-article__bottom--labore">
+                                <span class="news-article__date"> 28 JANUARY, 2020</span>
+                                <span class="news-article__author"> by admin</span>
+                            </div>
+                        </article>
                     </li>
                 </ul>
             </div>
-            <div class="partners-slider">
+
+            <!-- <div class="partners-slider">
                 <div class="container">
-                    <div class="swiper-container partners-slider__container">
+                    <div class="swiper-container-s2 partners-slider__inner">
                         <div class="swiper-wrapper partners-slider__wrapper">
                             <div class="swiper-slide partners-slider__slide">
-                                <img class="partners-slider__images partners-slider__images--peterson"
-                                    src="images/news/news-slider/1.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--kmn"
-                                    src="images/news/news-slider/2.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--chainforce"
-                                    src="images/news/news-slider/3.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--next"
-                                    src="images/news/news-slider/4.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--vintage"
-                                    src="images/news/news-slider/5.png" alt="our partners">
+                                <a class="partners-slide__link" href="#">
+                                    <img class="partners-slider__images" src="images/news/news-slider/1.png"
+                                        alt="our partners">
+                                </a>
                             </div>
                             <div class="swiper-slide partners-slider__slide">
-                                <img class="partners-slider__images partners-slider__images--peterson"
-                                    src="images/news/news-slider/1.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--kmn"
-                                    src="images/news/news-slider/2.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--chainforce"
-                                    src="images/news/news-slider/3.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--next"
-                                    src="images/news/news-slider/4.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--vintage"
-                                    src="images/news/news-slider/5.png" alt="our partners">
+                                <a class="partners-slide__link" href="#">
+                                    <img class="partners-slider__images" src="images/news/news-slider/2.png"
+                                        alt="our partners">
+                                </a>
                             </div>
                             <div class="swiper-slide partners-slider__slide">
-                                <img class="partners-slider__images partners-slider__images--peterson"
-                                    src="images/news/news-slider/1.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--kmn"
-                                    src="images/news/news-slider/2.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--chainforce"
-                                    src="images/news/news-slider/3.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--next"
-                                    src="images/news/news-slider/4.png" alt="our partners">
-                                <img class="partners-slider__images partners-slider__images--vintage"
-                                    src="images/news/news-slider/5.png" alt="our partners">
+                                <a class="partners-slide__link" href="#">
+                                    <img class="partners-slider__images" src="images/news/news-slider/3.png"
+                                        alt="our partners">
+                                </a>
                             </div>
-
+                            <div class="swiper-slide partners-slider__slide">
+                                <a class="partners-slide__link" href="#">
+                                    <img class="partners-slider__images" src="images/news/news-slider/4.png"
+                                        alt="our partners">
+                                </a>
+                            </div>
+                            <div class="swiper-slide partners-slider__slide">
+                                <a class="partners-slide__link" href="#">
+                                    <img class="partners-slider__images" src="images/news/news-slider/5.png"
+                                        alt="our partners">
+                                </a>
+                            </div>
                         </div>
-
                     </div>
-
-
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <address class="footer-top__element">
+                <address class="footer-top__element footer-top__element--address">
                     <a class="logo footer-top__logo" href="#">
                         <img class="logo__img" src="images/logo.png" alt="logo">
                     </a>
-                    <span class="footer-top__data">
-                        ADDRESS: 4772 Wines Lane Houston, TX 77032
+                    <span class="footer-top__record">ADDRESS:<a class="footer-top__data" href='#'>4772 Wines Lane
+                            Houston, TX 77032</a></span>
+
+                    <span class="footer-top__record">Telephone:
+                        <a class="footer-top__data" href="tel:+8323475843">+832-347-5843</a>
                     </span>
-                    <span class="footer-top__record">Telephone:</span>
-                    <a class="footer-top__data" href="tel:+8323475843">+832-347-5843</a>
-                    <span class="footer-top__record">Email:</span>
-                    <a class="footer-top__data" href="mailto:contact@Glee.com">
-                        contact@Glee.com
-                    </a>
+
+                    <span class="footer-top__record">Email:
+                        <a class="footer-top__data" href="mailto:contact@Glee.com">
+                            contact@Glee.com </a>
+                    </span>
                 </address>
                 <div class="footer-top__element footer-top__element--services">
                     <span class="footer-top__title">
