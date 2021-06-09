@@ -13,6 +13,7 @@
         justify-content: space-between;
         max-width: 1170px;
         width: 100%;
+        margin-bottom: 100px;
 
         @media (max-width: $screen-lg) {
             flex-wrap: wrap;
@@ -45,15 +46,12 @@
         max-width: 310px;
     }
 
-    &__link {
-        margin-bottom: 30px;
-    }
-
     &__images {
         position: relative;
         max-width: 370px;
         width: 100%;
         min-height: 250px;
+        object-fit: cover;
         background-color: $peach-700;
         border-radius: 5px 5px 0px 0px;
 
@@ -88,7 +86,7 @@
         padding: 10px 0;
         max-width: 103px;
         width: 100%;
-        transform: translate(30%, -110%);
+        transform: translate(28px, -18px);
         text-transform: uppercase;
         align-self: flex-start;
     }
@@ -99,7 +97,6 @@
         max-width: 315px;
         width: 100%;
         font-size: 12px;
-        font-weight: 400;
         color: $blue-300;
         @include Rubik(400);
         text-transform: uppercase;
@@ -116,47 +113,5 @@
 
     &__date {
         margin-right: 25px;
-    }
-}
-
-.partners-slider {
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    background-color: $peach-200;
-    min-height: 430px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-bottom: 80px;
-
-    &__inner {
-        max-width: 1050px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        max-width: 1050px;
-        width: 100%;
-    }
-
-    &__slide {
-        max-width: 160px;
-        width: 100%;
-        min-height: 48px;
-
-        &:not(:last-child) {
-            margin-right: 50px;
-        }
-    }
-
-    &__images {
-        opacity: 0.5;
-        max-width: 160px;
-        min-height: 48px;
-        object-fit: cover;
     }
 }
