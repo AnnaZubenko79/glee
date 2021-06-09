@@ -9,12 +9,14 @@ const replace = require('gulp-replace');
 const cheerio= require('gulp-cheerio');
 const sprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
+const ssi =  require('browsersync-ssi')
 
 
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: 'app/'
+            baseDir: 'app/',
+            middleware: ssi({ baseDir: 'app/', ext: '.html'}),
         }, 
         notify: false
     })

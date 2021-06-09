@@ -1,0 +1,16 @@
+@mixin Rubik($Rfw) {
+    font-family: 'Rubik', sans-serif;
+    font-weight: $Rfw;
+}
+
+@mixin DMSans($Dfw) {
+    font-family: 'DMSans', sans-serif;
+    font-weight: $Dfw;
+}
+
+@mixin LClamp($lk) {
+    -webkit-line-clamp: $lk;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

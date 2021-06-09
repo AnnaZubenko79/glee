@@ -11,6 +11,7 @@
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.14",
+    "browsersync-ssi": "^0.2.4",
     "del": "^6.0.0",
     "fansybox": "github:fancyapps/fancybox",
     "gulp": "^4.0.2",

@@ -6,49 +6,29 @@
 }
 
 .footer-top {
-    padding: 85px 0 75px;
+    padding: 42px 0 16px;
     border-bottom: 1px solid $blue-250;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: $screen-md) {
-        padding: 15px 0 15px;
-    }
-
-    @media (max-width: $screen-md) {
-        padding: 15px 0 15px;
-    }
-
-    @media (max-width: $screen-sm) {
-
         flex-wrap: wrap;
+        padding: 15px 0 15px;
+    }
+
+    @media (max-width: $screen-xs) {
+        justify-content: flex-start;
     }
 
     &__element {
         max-width: 200px;
         width: 100%;
 
-        &:not(:last-child) {
-            @media (max-width: $screen-xl) {
-                margin-right: 30px;
-            }
-
-            @media (max-width: $screen-md) {
-                margin-right: 10px;
-            }
-
-            @media (max-width: $screen-sm) {
-                max-width: 576px;
-                width: 100%;
-            }
-        }
-
         &--address {
             max-width: 190px;
 
-            @media (max-width: $screen-md) {
-                max-width: 320px;
-                width: 100%;
+            @media (max-width: $screen-xs) {
+                max-width: 100vw;
             }
         }
 
@@ -56,8 +36,17 @@
         &--account {
             padding-top: 15px;
 
-            @media (max-width: $screen-md) {
-                display: none;
+            @media (max-width: $screen-lg) {
+                max-width: 140px;
+            }
+
+            @media (max-width: $screen-sm) {
+                max-width: 100px;
+            }
+
+            @media (max-width: $screen-xs) {
+                max-width: 140px;
+                width: 100%;
             }
         }
 
@@ -65,9 +54,8 @@
             max-width: 270px;
             padding-top: 15px;
 
-            @media (max-width: $screen-lg) {
-                max-width: 360px;
-                width: 100%;
+            @media (max-width: $screen-md) {
+                max-width: 100vw;
             }
         }
     }
@@ -109,7 +97,10 @@
         @media (max-width: $screen-lg) {
             margin-bottom: 5px;
             line-height: 1.2;
-            font-size: 12px;
+        }
+
+        @media (max-width: $screen-md) {
+            display: block;
         }
     }
 
@@ -123,7 +114,7 @@
         text-transform: uppercase;
 
         @media (max-width: $screen-lg) {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
     }
 
@@ -160,8 +151,8 @@
         line-height: 1.6;
         @include LClamp(3);
 
-        @media (max-width: $screen-sm) {
-            margin-bottom: 5px;
+        @media (max-width: $screen-lg) {
+            margin-bottom: 20px;
         }
     }
 
@@ -173,9 +164,11 @@
         border: none;
         padding: 11px 12px;
         margin: 0;
+        font-size: 18px;
+        color: $blue-150;
 
         &::placeholder {
-            color: $blue-150;
+            color: $blue-200;
             font-size: 16px;
         }
 
@@ -217,7 +210,7 @@
     font-size: 14px;
 
     @media (max-width: $screen-sm) {
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 10px 0;
         font-size: 12px;
     }

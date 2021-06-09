@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     padding-bottom: 30px;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $screen-xl) {
         justify-content: center;
     }
 }
@@ -39,11 +39,6 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     transition: all 1s;
 
-    @media (max-width: $screen-lg) {
-        max-width: 230px;
-        padding: 5px;
-    }
-
     &:hover {
         .card__element {
             transform: translateY(-50%);
@@ -53,18 +48,31 @@
 
     &:not(:nth-child(4n+4)) {
         margin-right: 30px;
+
+        @media (max-width: $screen-lg) {
+            margin-right: 10px;
+        }
+
+        @media (max-width: $screen-sm) {
+            margin-right: 0;
+        }
     }
 
     &:not(:nth-child(n+5)) {
         margin-bottom: 30px;
+
+        @media (max-width: $screen-lg) {
+            margin-bottom: 15px;
+        }
     }
 
     @media (max-width: $screen-lg) {
+        padding: 5px;
         margin: 0 10px 15px 0;
     }
 
     @media (max-width: $screen-sm) {
-        margin: 0 0 15px 0;
+        margin-right: 0;
     }
 
     &__link {
@@ -145,12 +153,9 @@
     margin: 0 auto;
     padding: 65px 0;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-lg) {
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    @media (max-width: $screen-lg) {
         padding: 25px 0;
     }
 
@@ -164,15 +169,16 @@
         &:not(:last-child) {
             margin-right: 20px;
 
-            @media (max-width: $screen-md) {
-                margin-bottom: 25px;
+            @media (max-width: $screen-lg) {
+                margin: 0 0 25px;
             }
         }
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $screen-lg) {
             margin-right: 0;
             width: 100%;
             justify-content: space-around;
+            padding: 10px;
         }
 
         &::before {
@@ -185,8 +191,8 @@
             left: 0;
 
             @media (max-width: $screen-lg) {
-                min-height: 250px;
                 bottom: -15px;
+                min-height: 300px;
             }
         }
     }
@@ -206,11 +212,8 @@
 
     &__images {
         max-width: 233px;
-        max-height: 405px;
-
-        @media (max-width: $screen-lg) {
-            max-width: 150px;
-        }
+        min-height: 405px;
+        object-fit: cover;
     }
 
     &__info {
@@ -222,8 +225,14 @@
         width: 50%;
         min-height: 410px;
 
-        @media (max-width: $screen-lg) {
-            min-height: 155px;
+        @media (max-width: $screen-xs) {
+            min-height: 250px;
+        }
+
+        &--right {
+            @media (max-width: $screen-xs) {
+                max-width: 129px;
+            }
         }
     }
 
@@ -250,7 +259,10 @@
             line-height: 1.2;
             @include LClamp(2);
             margin-bottom: 20px;
+        }
 
+        @media (max-width: $screen-xs) {
+            display: none;
         }
     }
 
@@ -263,6 +275,11 @@
         line-height: 1;
         max-width: 185px;
         transition: all 1s;
+
+        @media (max-width: $screen-md) {
+            padding: 20px 9px;
+            max-width: 130px;
+        }
 
         svg {
             fill: $blue-200;

@@ -1,5 +1,7 @@
 $(function(){
-    let swiper = new Swiper('.swiper-container', { 
+   const slider = document.querySelector(".partners-slider__inner"); 
+   const slider1 = document.querySelector(".smart__content");
+    let swiper = new Swiper(slider1, { 
         pagination: { 
            el: '.swiper-pagination',            
            clickable: true, 
@@ -9,16 +11,20 @@ $(function(){
       },      
      });
 
-     let swiperNews = new Swiper('.swiper-container-s2', { 
-        slidesPerView: 5,
-        breakpoints: {               
-         480: {
-           slidesPerView: 1,         
-         },  
+   let  mySwiper = new Swiper(slider, {         
+      slidesPerView: 2,
+      spaceBetween: 10,
+      breakpoints: {         
          576: {
-            slidesPerView: 2,         
-          }, 
-      },      
+            slidesPerView: 3, 
+         },
+         768: {
+            slidesPerView: 4, 
+         },
+         992: {
+            slidesPerView: 5, 
+         }
+      }
      });  
       
          $('.dropdown--home').on('click', function(){
@@ -39,15 +45,15 @@ $(function(){
         let menuLink = document.querySelector(".menu__link");
         let container = document.querySelector(".container");
         let logoHeader = document.querySelector(".logo--header");
-        let headerInner = document.querySelector(".header__inner");
+        let headerWrapper = document.querySelector(".header__wrapper");
         if (menuBtn) { 
            menuBtn.addEventListener("click", function() { 
            menuBtn.classList.toggle("menu__btn--active"); 
            body.classList.toggle("lock"); 
            menu.classList.toggle("menu--active");  
            container.classList.toggle("container--active"); 
-           logoHeader.classList.toggle("logo--active");  
-           headerInner.classList.toggle("header__inner--active");  
+           logoHeader.classList.toggle("active");  
+           headerWrapper.classList.toggle("header__wrapper--active");  
    }); 
   } 
 

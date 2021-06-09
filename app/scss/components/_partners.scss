@@ -1,0 +1,25 @@
+.partners-slider {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        min-height: 436px;
+        bottom: -73px;
+        background-color: $peach-500;
+
+        @media (max-width: $screen-lg) {
+            min-height: 250px;
+
+        }
+    }
+
+    &__inner {
+        max-width: 1200px;
+    }
+
+    &__slide {
+        min-height: 80px;
+    }
+}

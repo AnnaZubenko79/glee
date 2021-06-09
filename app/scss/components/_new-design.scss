@@ -26,36 +26,45 @@
     background-color: $white-100;
     padding: 40px 36px;
 
-    @media (max-width: $screen-xl) {
-        padding: 5px 5px;
-    }
-
-    @media (max-width: $screen-lg) {
-        max-width: 350px;
-    }
-
-    @media (max-width: $screen-md) {
-        max-width: 280px;
-    }
-
     &:hover {
         box-shadow: 0px 0px 5px 3px $blue;
     }
 
     &:not(:nth-child(3n+3)) {
         margin-right: 30px;
+
+        @media (max-width: $screen-xl) {
+            margin-right: 15px;
+        }
+
+        @media (max-width: $screen-md) {
+            margin-right: 10px;
+        }
+
+        @media (max-width: $screen-sm) {
+            margin-right: 0;
+        }
     }
 
     &:not(:nth-child(n+4)) {
         margin-bottom: 30px;
+
+        @media (max-width: $screen-xl) {
+            margin-bottom: 15px;
+        }
     }
 
     @media (max-width: $screen-xl) {
+        padding: 5px 5px;
         margin: 0 15px 15px 0;
     }
 
     @media (max-width: $screen-md) {
-        margin: 0 5 5px 0;
+        margin-right: 10px;
+    }
+
+    @media (max-width: $screen-sm) {
+        margin-right: 0;
     }
 
     &__img {
@@ -64,7 +73,7 @@
         right: 0;
         object-fit: cover;
         max-width: 280px;
-        max-height: 200px;
+        min-height: 78px;
 
         &--chair {
             right: 35px
