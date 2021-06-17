@@ -1,0 +1,136 @@
+<section class="filters">
+    <div class="filters__item filters-category">
+        <h3 class="filters-category__title filters__title">category</h3>
+        <ul class="filters-category__list">
+            <li class="filters-category__items">
+                <button class="filters-category__btn filters-category__btn--active" type="button"
+                    data-filter='.category-chair'>
+                    <span class="filters-category__name">Chair</span>
+                    <svg>
+                        <use xlink:href='images/sprite.svg#arrow-category'></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="filters-category__items">
+                <button class="filters-category__btn" type="button" data-filter='.category-table'>
+                    <span class="filters-category__name">Table</span>
+                    <svg>
+                        <use xlink:href='images/sprite.svg#arrow-category'></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="filters-category__items">
+                <button class="filters-category__btn" type="button" data-filter='.category-lamp'>
+                    <span class="filters-category__name">Lamp</span>
+                    <svg>
+                        <use xlink:href='images/sprite.svg#arrow-category'></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="filters-category__items">
+                <button class="filters-category__btn" type="button" data-filter='.category-watch'>
+                    <span class="filters-category__name">Watch</span>
+                    <svg>
+                        <use xlink:href='images/sprite.svg#arrow-category'></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="filters-category__items">
+                <button class="filters-category__btn" type="button" data-filter='.category-clock'>
+                    <span class="filters-category__name">Clock</span>
+                    <svg>
+                        <use xlink:href='images/sprite.svg#arrow-category'></use>
+                    </svg>
+                </button>
+        </ul>
+        </li>
+    </div>
+    <div class="filters__item filter-price">
+        <h3 class="filter-price__title filters__title">price</h3>
+        <form class="filter-price__form" action="#">
+            <input class="filter-price__input" type="text" data-min="0" data-max="850" data-from="100.00"
+                data-to="500.00">
+            <label class="filter-price__label">
+                <span class="filter-price__info">
+                    $
+                    <span class="filter-price__from"></span>
+                </span>
+                <span class="filter-price__info">
+                    $<span class="filter-price__to"></span>
+                </span>
+            </label>
+        </form>
+    </div>
+    <div class="filters__item filter-brand">
+        <h3 class="filter-brand__title filters__title">brand</h3>
+        <form class="filter-brand__form" action="#">
+            <label class="filter-brand__label">
+                <input class="filter-brand__input" type="checkbox">
+                <div class="filter-brand__checkbox">
+                    <span>RFL</span>
+                    <span>(10)</span>
+                </div>
+            </label>
+            <label class="filter-brand__label">
+                <input class="filter-brand__input" type="checkbox">
+                <div class="filter-brand__checkbox">
+                    <span>Brothers</span>
+                    <span>(21)</span>
+                </div>
+            </label>
+            <label class="filter-brand__label">
+                <input class="filter-brand__input" type="checkbox">
+                <div class="filter-brand__checkbox">
+                    <span>Regal</span>
+                    <span>(3)</span>
+                </div>
+            </label>
+            <label class="filter-brand__label">
+                <input class="filter-brand__input" type="checkbox">
+                <div class="filter-brand__checkbox">
+                    <span>Nadia</span>
+                    <span>(14)</span>
+                </div>
+            </label>
+            <label class="filter-brand__label">
+                <input class="filter-brand__input" type="checkbox">
+                <div class="filter-brand__checkbox">
+                    <span>Octobi</span>
+                    <span>(6)</span>
+                </div>
+            </label>
+    </div>
+    <div class="filters__item filter-recent">
+        <h3 class="filter-recent__title filters__title">recent products</h3>
+        <article class="card-recent">
+            <a class="card-recent__link" href="#">
+                <img class="card-recent__img" src="images/filters/1.png" alt="Pendant lamp">
+            </a>
+            <div class="card-recent__info">
+                <a class="card-recent__title" href="#">Pendant lamp</a>
+                <div class="star card-recent__star" data-rateyo-rating="4"></div>
+                <span class="card-recent__price">23<span class="card-recent__curency">$</span></span>
+            </div>
+        </article>
+        <article class="card-recent">
+            <a class="card-recent__link" href="#">
+                <img class="card-recent__img" src="images/filters/2.png" alt="Pendant lamp">
+            </a>
+            <div class="card-recent__info">
+                <a class="card-recent__title" href="#">Pendant lamp</a>
+                <div class="star card-recent__star" data-rateyo-rating="3"></div>
+                <span class="card-recent__price">23<span class="card-recent__curency">$</span></span>
+            </div>
+        </article>
+        <article class="card-recent">
+            <a class="card-recent__link" href="#">
+                <img class="card-recent__img" src="images/filters/3.png" alt="Pendant lamp">
+            </a>
+            <div class="card-recent__info">
+                <a class="card-recent__title" href="#">Pendant lamp</a>
+                <div class="star card-recent__star" data-rateyo-rating="5"></div>
+                <span class="card-recent__price">23<span class="card-recent__curency">$</span></span>
+            </div>
+        </article>
+    </div>
+</section>

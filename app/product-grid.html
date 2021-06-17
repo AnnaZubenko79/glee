@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEE | Product list 1</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+ <!--#include virtual="components/header.html" -->
+
+ <main class="main">     
+    <section class="top top--product-list">
+        <h1 class="sr-only">Pages about products</h1>
+        <div class="container">
+            <h2 class="top__title">Product list 1</h2>
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Home</a>
+                    </li>                
+                    <li class="breadcrumbs__item">
+                       <a class="breadcrumbs__link" href="#">Product list 1</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="product-grid">
+        <div class="container">
+            <div class="product-grid__filter">
+                <div class="product-grid__buttons">
+                    <span class="product-grid__info">View</span>
+                    <button class="product-grid__btn product-grid__btn--grid product-grid__btn--active button-grid">
+                        <svg>
+                            <use xlink:href='images/sprite.svg#grid'></use>
+                        </svg>
+                    </button>
+                    <button class="product-grid__btn button-list">
+                        <svg>
+                            <use xlink:href='images/sprite.svg#list'></use>
+                        </svg>
+                    </button>
+                </div>  
+            </div>  
+        <div class="product-grid__inner">    
+<!--#include virtual="components/filters-grid.html" -->
+<div class="product-grid__wrapper">   
+<!--#include virtual="components/content-grid.html" -->
+<!--#include virtual="components/pagination.html" -->
+</div>
+</div>
+</div>
+</section>
+<div class="partners-slider partners-slider--grid">
+    <div class="container">
+        <div class="swiper-container partners-slider__inner">
+            <div class="swiper-wrapper partners-slider__wrapper">
+                <div class="swiper-slide partners-slider__slide">
+                    <a class="partners-slide__link" href="#">
+                        <img class="partners-slider__images" src="images/news/news-slider/1.png" alt="our partners">
+                    </a>
+                </div>
+                <div class="swiper-slide partners-slider__slide">
+                    <a class="partners-slide__link" href="#">
+                        <img class="partners-slider__images" src="images/news/news-slider/2.png" alt="our partners">
+                    </a>
+                </div>
+                <div class="swiper-slide partners-slider__slide">
+                    <a class="partners-slide__link" href="#">
+                        <img class="partners-slider__images" src="images/news/news-slider/3.png" alt="our partners">
+                    </a>
+                </div>
+                <div class="swiper-slide partners-slider__slide">
+                    <a class="partners-slide__link" href="#">
+                        <img class="partners-slider__images" src="images/news/news-slider/4.png" alt="our partners">
+                    </a>
+                </div>
+                <div class="swiper-slide partners-slider__slide">
+                    <a class="partners-slide__link" href="#">
+                        <img class="partners-slider__images" src="images/news/news-slider/5.png" alt="our partners">
+                    </a>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!--#include virtual="components/footer.html" -->
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

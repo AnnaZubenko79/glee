@@ -56,6 +56,8 @@ function styles() {
           'node_modules/swiper/swiper-bundle.js',
           'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
           'node_modules/mixitup/dist/mixitup.js',
+          'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+          'node_modules/rateyo/src/jquery.rateyo.js',
           'app/js/main.js'
       ])
       .pipe(concat('main.min.js'))

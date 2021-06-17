@@ -1,0 +1,51 @@
+.product-grid {
+    &__inner {
+        display: flex;
+        padding: 10px 0;
+
+        @media (max-width: $screen-xs) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__filter {
+        border: 1px solid $grey-100;
+        width: 100%;
+        border-radius: 25px;
+        padding: 19px 30px;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+
+        svg {
+            width: 25px;
+            height: 20px;
+            fill: $blue;
+        }
+
+        &--grid {
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        &--active {
+            svg {
+                fill: $red;
+            }
+        }
+    }
+}
