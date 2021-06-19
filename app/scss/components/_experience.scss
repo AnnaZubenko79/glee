@@ -1,0 +1,245 @@
+.experience {
+    padding: 120px 0;
+
+    @media (max-width: $screen-md) {
+        padding: 50px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1170px;
+        width: 100%;
+
+        @media (max-width: $screen-md) {
+            align-items: flex-start;
+        }
+    }
+
+    &__images {
+        max-width: 570px;
+        width: 100%;
+        margin-right: 25px;
+
+        @media (max-width: $screen-md) {
+            min-height: 580px;
+        }
+
+        @media (max-width: $screen-sm) {
+            position: absolute;
+        }
+    }
+
+    &__img {
+        max-width: 570px;
+        width: 100%;
+        min-height: 676px;
+        object-fit: cover;
+
+        @media (max-width: $screen-md) {
+            min-height: 580px;
+        }
+    }
+}
+
+.our-experience {
+    max-width: 555px;
+    width: 100%;
+    min-height: 583px;
+
+    @media (max-width: $screen-sm) {
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        padding: 10px;
+    }
+
+    &__years {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 277px;
+        width: 100%;
+        min-height: 140px;
+
+
+        @media (max-width: $screen-md) {
+            max-width: 190px;
+            min-height: 100px;
+        }
+
+        @media (max-width: $screen-sm) {
+            max-width: 190px;
+
+        }
+    }
+
+    &__num {
+        font-size: 140px;
+        @include Rubik(700);
+        color: $blue;
+
+        @media (max-width: $screen-md) {
+            font-size: 85px;
+        }
+
+        @media (max-width: $screen-sm) {
+            color: $white;
+        }
+    }
+
+    &__block {
+        min-height: 115px;
+
+        @media (max-width: $screen-md) {
+            min-height: 90px;
+        }
+    }
+
+    &__text {
+        display: block;
+        @include Rubik(400);
+        line-height: 1;
+        @include LClamp(5);
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: $screen-sm) {
+            color: $white;
+        }
+    }
+
+    &__mission {
+        min-height: 260px;
+        position: relative;
+
+        @media (max-width: $screen-md) {
+            min-height: 215px;
+        }
+
+        @media (max-width: $screen-sm) {
+            color: $white;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 38px;
+
+        @media (max-width: $screen-md) {
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+    }
+
+    &__descr {
+        line-height: 1.7;
+        border-bottom: 3px solid $blue;
+
+    }
+
+    &__descr p {
+        margin-bottom: 55px;
+        @include LClamp(5);
+    }
+
+    &__progress {
+        display: flex;
+        min-height: 120px;
+
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: $screen-sm) {
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            max-width: 576px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        @media (max-width: $screen-xs) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        max-width: 200px;
+        width: 100%;
+
+        @media (max-width: $screen-md) {
+            max-width: 130px;
+        }
+
+        svg {
+            fill: $blue;
+            margin-right: 15px;
+
+            @media (max-width: $screen-sm) {
+                fill: $white;
+            }
+        }
+
+        &--letters {
+            @media (max-width: $screen-md) {
+                margin-bottom: 15px;
+            }
+
+            svg {
+                width: 37px;
+                height: 38px;
+            }
+        }
+
+        &--horn {
+            @media (max-width: $screen-md) {
+                margin-bottom: 15px;
+            }
+
+            svg {
+                width: 43px;
+                height: 39px;
+            }
+        }
+
+        &--awards {
+            max-width: 150px;
+
+            svg {
+                width: 42px;
+                height: 40px;
+            }
+        }
+    }
+
+    &__sum {
+        display: block;
+        font-size: 36px;
+        line-height: 1.1;
+
+        @media (max-width: $screen-md) {
+            font-size: 25px;
+        }
+
+        @media (max-width: $screen-sm) {
+            color: $white;
+        }
+    }
+
+    &__subtitle {
+        @media (max-width: $screen-sm) {
+            color: $white;
+        }
+    }
+}

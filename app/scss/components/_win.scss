@@ -1,0 +1,115 @@
+.win {
+    padding: 77px 0 82px;
+    background-color: $peach;
+
+    @media (max-width: $screen-md) {
+        padding: 15px 0;
+    }
+
+    &__list {
+        max-width: 1170px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $screen-md) {
+            align-items: flex-start;
+        }
+
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        max-width: 270px;
+        width: 100%;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        @media (max-width: $screen-md) {
+            margin-right: 0;
+        }
+
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+            max-width: 150px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        max-width: 67px;
+        width: 100%;
+        min-height: 84px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            fill: $default;
+            width: 64px;
+        }
+
+        &--monitor {
+            svg {
+                height: 57px;
+            }
+        }
+
+        &--delivery {
+            svg {
+                height: 40px;
+            }
+        }
+
+        &--hour {
+            svg {
+                width: 67px;
+                height: 64px;
+            }
+        }
+
+        &--brands {
+            svg {
+                width: 48px;
+                height: 64px;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $blue;
+            top: 36px;
+            right: 0;
+            opacity: 0.7;
+        }
+    }
+
+    &__num {
+        font-size: 36px;
+        margin-bottom: 7px;
+
+        @media (max-width: $screen-md) {
+            font-size: 25px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+    }
+}
