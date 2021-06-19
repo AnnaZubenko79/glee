@@ -1,7 +1,6 @@
 .news {
     position: relative;
-    min-height: 880px;
-    padding: 110px 0 114px;
+    padding: 0 0 114px;
 
     &__title {
         margin-bottom: 42px;
@@ -113,5 +112,17 @@
 
     &__date {
         margin-right: 25px;
+        svg {
+            fill: $default;
+            width: 12px;
+            height: 12px;
+        }
+    }
+    &__author {
+        svg {
+            fill: $default;
+            width: 12px;
+            height: 12px;
+        }
     }
 }
