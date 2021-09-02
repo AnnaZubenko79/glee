@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEE | </title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!--#include virtual="components/header.html" -->
+    <main class="main">
+        <section class="top">
+            <h1 class="sr-only">Pages about products</h1>
+            <div class="container">
+                <h2 class="top__title">Product list 1</h2>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Product list 1</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__wrapper">
+                    <span class="contacts__subtitle">Write Here</span>
+                    <span class="contacts__title">Get In Touch</span>
+                    <ul class="contacts__list">
+                        <li class="contacts__item">
+                            <div class="contacts__img contacts__img--location">
+                                <svg>
+                                    <use xlink:href="images/sprite.svg#location"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Address</span>
+                                <span class="contacts__item-address">
+                                    2416 Mapleview Drive
+                                    Tampa, FL 33634
+                                </span>
+                            </div>
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__img contacts__img--email">
+                                <svg>
+                                    <use xlink:href="images/sprite.svg#email"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Our Email</span>
+                                <a class="contacts__item-link" href="mailto:contact@website.com">
+                                    <span class="contacts__item-data">Main Email:</span>
+                                    contact@website.com
+                                </a>
+                                <a class="contacts__item-link" href="mailto:Info@mail.com">
+                                    <span class="contacts__item-data">Inquiries:</span>
+                                    Info@mail.com
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contacts__item">
+                            <div class="contacts__img contacts__img--phone">
+                                <svg>
+                                    <use xlink:href="images/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Our Phone</span>
+                                <a class="contacts__item-link" href="tel:0029129102320">
+                                    <span class="contacts__item-data">Office Telephone:</span>
+                                    0029129102320
+                                </a>
+                                <a class="contacts__item-link" href="tel:000232439493">
+                                    <span class="contacts__item-data">Mobile:</span>
+                                    000 2324 39493
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contacts__bottom">
+                        <form class="contacts__form" action="#">
+                            <div class="contacts__box-input">
+                                <label class="contacts__label contacts__label--name">
+                                    <input class="contacts__input contacts__input--name" type="text" placeholder="NAME">
+                                    <svg>
+                                        <use xlink:href='images/sprite.svg#avatar'></use>
+                                    </svg>
+                                </label>
+                                <label class="contacts__label">
+                                    <input class="contacts__input" type="text" placeholder="EMAIL">
+                                    <svg>
+                                        <use xlink:href='images/sprite.svg#mail-icon'></use>
+                                    </svg>
+                                </label>
+                            </div>
+                            <label class="contacts__label-textarea">
+                                <textarea class="contacts__textarea" placeholder="Message"></textarea>
+                                <svg>
+                                    <use xlink:href='images/sprite.svg#comment'></use>
+                                </svg>
+                            </label>
+                            <button class="contacts__form-btn btn" type="submit">send message</button>
+                        </form>
+                        <div class="map">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include virtual="components/news.html" -->
+    </main>
+
+    <!--#include virtual="components/footer.html" -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 40.77489598110828,
+                    lng: -73.98911140636157
+                },
+                zoom: 13,
+                styles: [{
+                        "stylers": [{
+                            "hue": "#dd0d0d"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{
+                                "lightness": 100
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    }
+                ]
+            });
+        }
+    </script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

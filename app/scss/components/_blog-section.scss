@@ -1,0 +1,240 @@
+.blog {
+    padding: 120px 0 115px;
+    
+
+    @media (max-width: $screen-lg) {
+        padding: 30px 0 35px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1170px;
+        width: 100%;
+
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__content {
+        max-width: 830px;
+        width: 100%;
+        margin-right: 40px;
+
+        @media (max-width: $screen-md) {
+            order: 2;
+            margin-right: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 50px;
+        @media (max-width: $screen-md) {
+            margin-bottom: 30px;
+        }
+
+        &--last {
+            margin-bottom: 89px;
+            @media (max-width: $screen-md) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    &__images {
+        position: relative;
+        margin-bottom: 35px;
+    }
+
+    &__img {
+        max-width: 830px;
+        width: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        @media (max-width: $screen-md) {
+            min-height: auto;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        background-color: $blue;
+        color: $white;
+        font-size: 12px;
+        padding: 27px 36px 27px 23px;
+        text-transform: uppercase;
+        @media (max-width: $screen-md) {
+            padding: 10px;
+        }
+    }
+
+    &__date,
+    &__author {
+        svg {
+            width: 12px;
+            height: 12px;
+            fill: $white;
+        }
+    }
+
+    &__date {
+        margin-right: 20px;
+        @media (max-width: $screen-md) {
+            margin-right: 10px;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-size: 36px;
+        color: $grey-450;
+        margin-bottom: 17px;
+        @include Rubik(400);
+        @media (max-width: $screen-md) {
+           font-size: 25px;
+           line-height: 1;
+           margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        line-height: 1.9;
+        max-width: 800px;
+        width: 100%;
+        @include Rubik(400);
+        margin-bottom: 26px;
+        @media (max-width: $screen-md) {            
+            line-height: 1.4;
+            margin-bottom: 20px;
+         }
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid $blue;
+        color: $blue;
+    }
+
+    &__arrow {
+        svg {
+            fill: $blue;
+        }
+    }
+
+    &__pagination {
+        justify-content: start;
+    }
+
+    &__filter {
+        max-width: 270px;
+        width: 100%;
+        margin-right: 0;
+
+        @media (max-width: $screen-md) {
+            max-width: 768px;
+        }
+    }
+
+    .filter-search {
+        @media (max-width: $screen-md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .filters__title {
+        @media (max-width: $screen-md) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .card-recent {
+        @media (max-width: $screen-md) {
+            flex-direction: column;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &__title {
+            @media (max-width: $screen-md) {
+                @include LClamp(2);
+                max-width: 100px;
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            width: 71px;
+            height: 71px;
+            @media (max-width: $screen-md) {
+               margin-right: 0;
+            }
+        }
+
+        &__img {
+            width: 71px;
+            height: 71px;
+        }
+
+        &__date {
+            @media (max-width: $screen-md) {
+                display: none;
+            }
+        }
+    }
+
+    .partners-slider::before {
+        min-height: 200px;
+    }
+
+    .filter-recent {
+        @media (max-width: $screen-md) {
+            margin-bottom: 15px;          
+        }
+
+        &__card {
+            @media (max-width: $screen-md) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+
+    .filters-category {
+        @media (max-width: $screen-md) {
+            margin-bottom: 20px;
+        }
+
+        &__name {
+            @media (max-width: $screen-md) {
+                margin-right: 10px;
+            }
+        }
+
+        &__btn {
+            svg {
+                margin-top: 3px;
+            }
+        }
+
+        &__list {
+            margin-bottom: 50px;
+
+            @media (max-width: $screen-md) {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

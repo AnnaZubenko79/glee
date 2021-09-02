@@ -1,0 +1,303 @@
+.product-details {
+    padding: 120px 0 70px;
+    @media (max-width: $screen-md) {
+       padding-top: 70px;         
+    }
+
+    &__top {
+        display: flex;
+        margin-bottom: 90px;
+        @media (max-width: $screen-md) {
+            flex-direction: column;  
+            align-items: center;    
+            margin-bottom: 35px;      
+        }
+    }
+
+    &__top-slider {
+        display: flex;
+    }
+
+    .slick-vertical .slick-slide {
+        height: 125px;
+        margin-bottom: 9px;
+    }
+
+    &__thumb {
+        max-width: 125px;
+        width: 100%;
+        margin-right: 30px;
+        @media (max-width: $screen-lg) {
+            display: none;            
+        }
+    }
+
+    &__thumb-item {
+        margin-bottom: 9px;
+        max-width: 125px;
+        display: block;
+        height: 125px;
+        cursor: pointer;
+        border: 2px solid $grey-150;
+        background-color: $grey-160;
+
+        img {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
+        }
+    }
+
+    &__big {
+        max-width: 383px;
+        margin-right: 20px;
+        @media (max-width: $screen-md) {
+            margin-right: 0;          
+        }
+        @media (max-width: $screen-sm) {
+            max-width: 300px;                  
+        }
+    }
+
+    &__big-item {      
+        border: 2px solid $grey-150;
+        background-color: $grey-160;
+
+
+        img {
+            max-width: 383px;
+            width: 100%;
+            height: 526px;
+            object-fit: contain;
+            @media (max-width: $screen-sm) {
+                max-width: 300px;
+                height: 250px;          
+            }
+        }
+    }
+
+    &__top-title {
+        display: block;
+        font-size: 40px;
+        @include Rubik(400);
+        margin-bottom: 20px;
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;            
+        }
+    }
+
+    .star {
+        margin-bottom: 30px;
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;            
+        }
+    }
+
+    &__top-price {
+        display: inline-block;
+        margin-bottom: 35px;
+        @include Rubik(400);
+        font-size: 30px;
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;            
+        }
+    }
+
+    &__top-descr {
+        line-height: 1.9;
+        margin-bottom: 30px;
+        @media (max-width: $screen-lg) {
+            line-height: 1.5;
+            margin-bottom: 10px;            
+        }
+    }
+
+    &__num {
+        margin-bottom: 50px;
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;            
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .jq-number__field {
+        width: 153px;
+        height: 53px;
+        border: 1px solid $grey-150;
+        transform: translateY(1px);
+
+        input {
+            width: 100%;
+            height: 51px;
+            border: none;
+            outline: none;
+            @include Rubik(400);
+            color: $grey-300;
+            text-align: center;
+        }
+    }
+
+    .jq-number {
+        padding: 0;
+        position: relative;
+    }
+
+    .jq-number__spin {
+        position: absolute;
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .jq-number__spin.minus {
+        left: 15px;
+    }
+
+    .jq-number__spin.plus {
+        right: 15px;
+    }
+
+    .jq-number__spin::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        background-color: $grey-300;
+        width: 12px;
+        height: 1px;
+    }
+
+    .jq-number__spin.plus::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 6px;
+        background-color: $grey-300;
+        width: 1px;
+        height: 12px;
+    }
+
+    &__btn {
+        width: 208px;
+        height: 53px;
+        border-radius: 5px;
+        background-color: $blue;
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+        @include Rubik(400);
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;            
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 120px;
+        @media (max-width: $screen-md) {
+            margin-bottom: 35px;           
+        }
+    }
+
+    &__tabs-list {
+        display: flex;
+        margin-bottom: 25px;
+        @media (max-width: $screen-md) {
+            flex-wrap: wrap;          
+        }
+    }
+    &__tabs-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        height: 40px;
+        
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__tabs-link {
+        display: block;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        background-color: $blue-100;
+        border-radius: 5px; 
+        padding: 10px;
+        color: $default;
+        &--active {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    &__tabs-info {
+        display: none;
+        &.product-details__tabs-info--active {
+            display: block;
+        }
+    }
+
+    &__tabs-text {
+        @include Rubik(400);
+        line-height: 1.8;
+    }
+}
+
+.related-product {
+    &__title {
+        display: block;
+        font-size: 36px;
+        margin-bottom: 75px;
+    }
+    &__slider {
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: $white;
+            border: 2px solid $blue-100;
+            border-radius: 5px;
+            top: -125px;
+            @media (max-width: $screen-xs) {
+                top: -70px;
+            }
+            svg {
+                fill: $blue;
+
+            }
+        }
+        .slick-prev {           
+            right: 75px;
+            @media (max-width: $screen-xs) {
+                left: 20px;
+            }
+        }
+        .slick-next {
+            right: 0;
+            @media (max-width: $screen-xs) {
+                right: 20px;
+            }
+        }
+        .slick-disabled {
+            border: 2px solid $blue;
+            background-color: $white;
+        }
+    }
+    .card-new {
+        width: 270px;
+        height: 383px;
+        background-color: $grey-160;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}

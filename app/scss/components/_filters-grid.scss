@@ -170,6 +170,7 @@
         min-height: 29px;
         object-fit: cover;
         margin: 0 auto;
+        
     }
 
     &__title {
@@ -192,5 +193,52 @@
     &__price {
         font-size: 15px;
         @include Rubik(400);
+    }
+    &__date {
+        font-size: 14px;
+        margin-right: 12px;
+        color: $grey-200;
+        svg {
+            fill: $grey-200;
+            width: 12px;
+            height: 12px;
+        }   
+          
+    }
+}
+
+.filter-search {
+    margin-bottom: 52px;
+    &__label {
+        display: block;
+        border: 1px solid $blue;
+        max-width: 270px;
+        width: 100%;
+        min-height: 45px;
+        border-radius: 5px;
+
+    }
+    &__input {
+        max-width: 218px;
+        width: 100%;
+        padding: 5px;
+       
+        
+        
+        border: none;
+        
+    }
+
+    &__btn {
+        background-color: $blue; 
+        border-radius: 5px;
+        padding: 10px 14px;
+        border: none;
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: $default;
+        }
+          
     }
 }

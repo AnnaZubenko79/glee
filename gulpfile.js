@@ -9,7 +9,8 @@ const replace = require('gulp-replace');
 const cheerio= require('gulp-cheerio');
 const sprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
-const ssi =  require('browsersync-ssi')
+const ssi =  require('browsersync-ssi');
+const buildssi =  require('gulp-ssi')
 
 
 function browsersync() {
@@ -21,22 +22,6 @@ function browsersync() {
         notify: false
     })
 }
-
-
-// function styles() {
-//     return src([
-//     'node_modules/swiper/swiper.scss',
-//     'node_modules/@fancyapps\fancybox/dist/jquery.fancybox.min.css',
-//     'app/scss/style.scss'])
-//       .pipe(scss({ outputStyle: 'compressed'}))
-//       .pipe(concat('style.min.css'))
-//       .pipe(autoprefixer({
-//         overrideBrowserslist: ['last 10 version'],
-//         grid: true
-//       }))
-//       .pipe(dest('app/css'))
-//       .pipe(browserSync.stream()) 
-//   }
 
 function styles() {
     return src('app/scss/style.scss')
@@ -55,8 +40,10 @@ function styles() {
           'node_modules/jquery/dist/jquery.js',
           'node_modules/swiper/swiper-bundle.js',
           'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+          'node_modules/slick-carousel/slick/slick.js',
           'node_modules/mixitup/dist/mixitup.js',
           'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+          'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
           'node_modules/rateyo/src/jquery.rateyo.js',
           'app/js/main.js'
       ])
@@ -107,19 +94,26 @@ function styles() {
 }
 
 
-  function build() {
-      return src([
-          'app/**/*.html',
-          'app/css/style.min.css',
-          'app/js/main.min.js'
-      ], {base: 'app'})
-      .pipe(dest('dist'))
-  }
+function buildcopy() {
+    return src([          
+      '{app/js,app/css}/*.min.*',
+      'app/images/**/*.*',
+      '!app/images/src/**/*',
+      'app/fonts/**/*'
+    ], {base: 'app'})
+    .pipe(dest('dist'))
+}
 
-  function cleanDist() {
-      return del('dist')
 
-  }
+function buildhtml() {
+    return src (['app/**/*.html', '!app/components/**/*'])
+    .pipe(buildssi({ root: 'app/'}))
+    .pipe(dest('dist'))
+}
+
+function cleanDist() {
+    return del('dist/**/*', { force: true })
+}
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
@@ -136,6 +130,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svgSprite = svgSprite;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, scripts, images, buildcopy, buildhtml);
 
 exports.default = parallel(styles, scripts, svgSprite, browsersync, watching);

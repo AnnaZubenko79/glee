@@ -1,0 +1,71 @@
+.terms {
+    padding: 120px 0 70px;
+
+    @media (max-width: $screen-lg) {
+        padding: 40px 0 40px;
+    }
+
+    &__title {
+        @include Rubik(500);
+        font-size: 24px;
+        display: block;
+        margin-bottom: 35px;
+
+        @media (max-width: $screen-lg) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        counter-reset: num;
+        margin-bottom: 70px;
+        padding: 0;
+
+        @media (max-width: $screen-lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item {
+        @include Rubik(400);
+        line-height: 1.9;
+        padding-left: 40px;
+        position: relative;
+        @media (max-width: $screen-xs) {
+            line-height: 1.4;
+         }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            @media (max-width: $screen-lg) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &::before {
+            content: '0'counter(num) ".";
+            counter-increment: num;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__collects {
+        &:not(:last-child) {
+            margin-bottom: 70px;
+             @media (max-width: $screen-lg) {
+           margin-bottom: 30px;
+         }
+        }
+    }
+
+    &__text {
+        @include Rubik(400);
+        line-height: 1.9;
+        @media (max-width: $screen-xs) {
+            line-height: 1.4;
+         }
+    }
+}

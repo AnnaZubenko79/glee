@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: 212px;
+    @media (max-width: $screen-lg) {
+        margin-bottom: 30px;
+    }
 
     &__item {
         &:not(:last-child) {
