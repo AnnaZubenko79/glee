@@ -1,7 +1,53 @@
 $(function(){
+   $('.product-details__tabs-link').on('click', function(e) {
+      e.preventDefault();
+      $('.product-details__tabs-link').removeClass('product-details__tabs-link--active');
+      $(this).addClass('product-details__tabs-link--active');
+      $('.product-details__tabs-info').removeClass('product-details__tabs-info--active');
+      $($(this).attr('href')).addClass('product-details__tabs-info--active');
+   });
+
+   $('.related-product__slider').slick({
+      slidesToShow: 4,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9"><path d="M1460.7,1330.53h-16.94l0.1-2.86a0.3,0.3,0,0,0,.08-0.2,0.323,0.323,0,0,0-.08-0.21l-0.18-.17a0.267,0.267,0,0,0-.4,0l-4.2,4.21a0.3,0.3,0,0,0-.08.2,0.323,0.323,0,0,0,.08.21l4.2,4.21a0.29,0.29,0,0,0,.4,0l0.18-.17a0.323,0.323,0,0,0,.08-0.21,0.3,0.3,0,0,0-.08-0.2l-0.12-2.86h16.97a0.3,0.3,0,0,0,.29-0.3v-1.37A0.291,0.291,0,0,0,1460.7,1330.53Z" transform="translate(-1439 -1327)"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9"><path d="M1509.3,1332.47h16.94l-0.1,2.86a0.3,0.3,0,0,0-.08.2,0.323,0.323,0,0,0,.08.21l0.18,0.17a0.267,0.267,0,0,0,.4,0l4.2-4.21a0.3,0.3,0,0,0,.08-0.2,0.323,0.323,0,0,0-.08-0.21l-4.2-4.21a0.29,0.29,0,0,0-.4,0l-0.18.17a0.323,0.323,0,0,0-.08.21,0.318,0.318,0,0,0,.08.2l0.12,2.86h-16.97a0.3,0.3,0,0,0-.29.3v1.37A0.291,0.291,0,0,0,1509.3,1332.47Z" transform="translate(-1509 -1327)"/></svg></button>',
+   infinite: false,
+   responsive: [
+      {
+        breakpoint: 768,
+           settings: {
+              slidesToShow: 2,
+   }
+},
+{
+   breakpoint: 480,
+           settings: {
+              slidesToShow: 1,
+   },
+   }
+   ]
+ 
+   });
+
+   $('.product-details__thumb').slick({
+      asNavFor: '.product-details__big',
+      focusOnSelect: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      vertical: true,
+      draggable: false,
+    });
+    $('.product-details__big').slick({
+      asNavFor: '.product-details__thumb',
+      draggable: false,
+      arrows: false,
+      fade: true,
+    });
+
+
    const slider = document.querySelector(".partners-slider__inner"); 
    const slider1 = document.querySelector(".smart__content");
-    let swiper = new Swiper(slider1, { 
+    var swiper = new Swiper(slider1, { 
         pagination: { 
            el: '.swiper-pagination',            
            clickable: true, 
@@ -11,23 +57,21 @@ $(function(){
       },      
      });
 
-   let  mySwiper = new Swiper(slider, {         
-      slidesPerView: 1,      
+   var mySwiper = new Swiper(slider, {         
+      slidesPerView: 1,  
    
       breakpoints: {         
          576: {
             slidesPerView: 2, 
          },
-         // 768: {
-         //    slidesPerView: 4, 
-         // },
+         
          992: {
             slidesPerView: 4, 
          },
          1200: {
             slidesPerView: 5, 
-         }
-      }
+         },
+      },
      });  
       
          $('.dropdown--home').on('click', function(){
@@ -39,7 +83,6 @@ $(function(){
 
          $(window).on("scroll", function() {
             $('.header').toggleClass("header--active", $(this).scrollTop() > $('.header').height());
-            // $('.logo').toggleClass("logo--active", $(this).scrollTop() > $('.header').height());
          });
 
         let menuBtn = document.querySelector(".menu__btn"); 
@@ -91,9 +134,6 @@ $(function(){
    ratedFill: "#ffcc00",
    readOnly: true
  });
- 
-
-
 
 $('.product-grid__btn').on('click', function(){
    $('.product-grid__btn').removeClass('product-grid__btn--active');
@@ -113,22 +153,28 @@ $('.card__buttons').on('click', function(){
    $('.card__click').addClass('card__click--active')
 });
 
+$('select-style, .product-details__num').styler();
 
-var mixer = mixitup (".filters-category__list", {
- animation: {
- duration: 0.2  
-}          
-});
 
-   var mixer = mixitup ('.gallery-content', {
-       animation: {
-       duration: 0.2  
-   }          
-});
+
+// var mixer = mixitup (".filters-category__list", {
+//  animation: {
+//  duration: 0.2  
+// }          
+// });
+
+
+ var containerEl1 = document.querySelector('[data-ref="container-1"]');
+ var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+ var config = {
+   controls: {
+     scope: 'local'
+   }
+ };
+
+ var mixer1 = mixitup(containerEl1, config);
+ var mixer2 = mixitup(containerEl2, config);
+
  
-  var mixer = mixitup ('.new-design__content', {
-    animation: {
-        duration: 0.2  
-    }          
- });
 });

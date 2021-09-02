@@ -1,0 +1,104 @@
+.login {
+    padding: 120px 0 65px;
+    @media (max-width: $screen-lg) {
+        padding: 30px 0 35px;
+    }
+    &__wrapper {
+        padding-bottom: 120px;
+        @media (max-width: $screen-md) {
+           padding-bottom: 30px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 465px;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto 30px;
+    }
+
+    &__label {
+        max-width: 465px;
+        width: 100%;
+
+        span {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            @include Rubik(400);
+            color: $blue-200;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        min-height: 60px;
+        padding: 20px;
+        border: 1px solid $grey-100;
+        margin-bottom: 25px;
+
+        &--last {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 20px 10px;
+        border: none;
+        background-color: $blue;
+        border: 2px solid transparent;
+        color: $white;
+        font-size: 18px;
+        @include Rubik(500);
+        margin-bottom: 35px;
+        transition: all 0.5s;
+        &:hover {
+            background-color: $white;
+            border: 2px solid $blue;
+            color: $blue;
+        }
+    }
+
+    &__checked {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: $blue;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $grey-100;
+    }
+
+    &__registered {
+        margin: 0 auto 25px;
+        display: block;
+        max-width: 200px;
+        width: 100%;
+        font-size: 14px;
+        @include Rubik(400);
+
+    }
+    &__create {
+        display: block;
+        max-width: 465px;
+        width: 100%;
+        padding: 20px;
+        background-color: $white;
+        border: 2px solid $blue;
+        color: $blue-200;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        @include Rubik(500);
+        transition: all 0.5s;
+        &:hover {
+            background-color: $blue;
+            border: 2px solid $white;
+            color: $white;
+        }
+    }
+    
+}

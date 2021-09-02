@@ -1,6 +1,10 @@
 .news {
     position: relative;
     padding: 0 0 114px;
+    @media (max-width: $screen-lg) {
+        padding-bottom: 30px;
+    }
+
 
     &__title {
         margin-bottom: 42px;
@@ -17,6 +21,7 @@
         @media (max-width: $screen-lg) {
             flex-wrap: wrap;
             justify-content: space-around;
+            margin-bottom: 50px;
         }
     }
 
